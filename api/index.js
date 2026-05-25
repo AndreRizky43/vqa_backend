@@ -15,6 +15,9 @@ const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
 // Endpoint POST untuk menerima skor dari Construct 2
 app.post("/api/generate-soal", async (req, res) => {
+
+    console.log(`[${new Date().toISOString()}] 🎯 Hit API /api/generate-soal | Skor diterima:`, req.body.score);
+
   try {
     const { score } = req.body;
 

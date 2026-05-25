@@ -20,3 +20,12 @@ Content-Type: application/json
 {
     "score": 35
 }
+
+//PROD
+### Mengetes Endpoint Generate Soal Gemini (Kirim Skor Tinggi)
+POST https://vqa-backend-fa8u.vercel.app/api/generate-soal
+Content-Type: application/json
+
+{
+    "score": 90
+}
