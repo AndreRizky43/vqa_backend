@@ -27,7 +27,7 @@ app.post("/api/generate-soal", async (req, res) => {
     }
 
     // Susun prompt sesuai permintaan Anda
-    const promptText = `Hasil skor latihan siswa: ${score} Berdasarkan skor tersebut, buatkan soal ujian IPAS tingkat SD yang sesuai dengan kemampuan siswa. Tingkat kesulitan soal harus menyesuaikan skor siswa (skor rendah = soal mudah, skor tinggi = soal lebih menantang). Buat sebanyak 10 soal pilihan ganda. Response wajib dalam format JSON tanpa penjelasan tambahan dengan struktur seperti berikut:
+    const promptText = `Hasil skor latihan siswa: ${score} Berdasarkan skor tersebut, buatkan soal ujian IPAS tingkat SD yang sesuai dengan kemampuan siswa yang bertemakan Keragaman Budaya dan Kearifan Lokal dan Perubahan Wujud Benda. Tingkat kesulitan soal harus menyesuaikan skor siswa (skor rendah = soal mudah, skor tinggi = soal lebih menantang). Buat sebanyak 10 soal pilihan ganda. Response wajib dalam format JSON tanpa penjelasan tambahan dengan struktur seperti berikut:
 {
   "level": "mudah | sulit",
   "materi": "topik IPAS",
