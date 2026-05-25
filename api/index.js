@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const cors = require("cors");
 const { GoogleGenAI } = require("@google/genai");
@@ -30,11 +31,11 @@ app.post("/api/generate-soal", async (req, res) => {
   "questions": [
     {
       "question": "isi soal",
-      "options": ["A", "B", "C"],
+      "options": ["1", "2", "3"],
       "answer": "jawaban benar"
     }
   ]
-} Response HARUS valid JSON.Tanpa markdown.Tanpa penjelasan.`;
+} Response HARUS valid JSON.Tanpa markdown.Tanpa penjelasan. tidak usah kasih awalan untuk optionnya, langsung option jawaban.`;
 
     // Panggil Gemini API menggunakan model gemini-2.5-flash (cepat dan hemat biaya)
     const response = await ai.models.generateContent({
@@ -68,6 +69,13 @@ app.post("/api/generate-soal", async (req, res) => {
 app.get("/", (req, res) => {
   res.send("Backend Jembatan Gemini untuk Construct 2 aktif!");
 });
+
+if (process.env.NODE_ENV !== 'production') {
+  const PORT = 3000;
+  app.listen(PORT, () => {
+    console.log(`🚀 Server lokal siap! Berjalan di: http://localhost:${PORT}`);
+  });
+}
 
 // EXPORT APP (Jangan pakai app.listen jika ingin di-deploy ke Vercel)
 module.exports = app;

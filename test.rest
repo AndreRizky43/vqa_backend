@@ -1,0 +1,22 @@
+### Mengetes Halaman Utama Backend
+GET http://localhost:3000/
+
+###
+
+### Mengetes Endpoint Generate Soal Gemini (Kirim Skor Tinggi)
+POST http://localhost:3000/api/generate-soal
+Content-Type: application/json
+
+{
+    "score": 90
+}
+
+###
+
+### Mengetes Endpoint Generate Soal Gemini (Kirim Skor Rendah)
+POST http://localhost:3000/api/generate-soal
+Content-Type: application/json
+
+{
+    "score": 35
+}
