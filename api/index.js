@@ -35,9 +35,8 @@ Materi yang boleh digunakan:
 - Perubahan Wujud Benda
 
 Tingkat kesulitan harus menyesuaikan skor siswa:
-- Skor rendah = mudah
-- Skor sedang = sedang
-- Skor tinggi = lebih menantang
+- Skor dibawah 60 = mudah
+- Skor diatas 60 = sedang
 
 PENTING:
 1. SEMUA soal WAJIB menggunakan gambar.
