@@ -58,6 +58,8 @@ DAFTAR ASET GAMBAR:
 - Rumah adat Papua: https://i.imgur.com/NJqrQp3.png
 - Proses menyublim: https://i.imgur.com/z2imR01.png
 - Es membeku: https://i.imgur.com/uJRZwbM.png
+- Gas menjadi kristal : https://i.imgur.com/xpyfRDI.png
+- Rumah joglo jawa : https://i.imgur.com/DuKKvAD.png
 
 Response WAJIB berupa JSON VALID tanpa markdown dan tanpa penjelasan tambahan.
 
@@ -82,6 +84,7 @@ Format:
 
 VALIDASI SEBELUM MEMBERIKAN JAWABAN:
 - questions harus berisi tepat 10 soal.
+- opsi pilhan harus cuma 3.
 - Semua soal harus memiliki image.
 - Tidak boleh ada image kosong.
 - Tidak boleh ada image null.
@@ -104,6 +107,22 @@ VALIDASI SEBELUM MEMBERIKAN JAWABAN:
 
     // Parse string tersebut menjadi objek JSON asli
     const jsonResponse = JSON.parse(resultText);
+
+    console.log("\n========== HASIL SOAL GEMINI ==========");
+
+    jsonResponse.questions.forEach((q, index) => {
+      console.log(`\nSoal ${index + 1}`);
+      console.log(`Pertanyaan : ${q.question}`);
+      console.log(`Gambar     : ${q.image}`);
+
+      q.options.forEach((option, i) => {
+        console.log(`Pilihan ${i + 1} : ${option}`);
+      });
+
+      console.log(`Jawaban    : ${q.answer}`);
+    });
+
+    console.log("\n=======================================\n");
 
     // Kirim balik ke Construct 2
     return res.json(jsonResponse);
