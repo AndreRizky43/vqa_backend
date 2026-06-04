@@ -36,7 +36,7 @@ Materi yang boleh digunakan:
 
 Tingkat kesulitan harus menyesuaikan skor siswa:
 - Skor dibawah 60 = mudah
-- Skor diatas 60 = sedang
+- Skor diatas 60 = sulit
 
 PENTING:
 1. SEMUA soal WAJIB menggunakan gambar.
