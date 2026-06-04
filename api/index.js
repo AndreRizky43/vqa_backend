@@ -36,7 +36,7 @@ Materi yang boleh digunakan:
 
 Tingkat kesulitan harus menyesuaikan skor siswa:
 - Skor dibawah 60 = mudah
-- Skor diatas 60 = sulit
+- Skor sama dengan atau diatas 60 = sulit
 
 PENTING:
 1. SEMUA soal WAJIB menggunakan gambar.
@@ -65,7 +65,7 @@ Response WAJIB berupa JSON VALID tanpa markdown dan tanpa penjelasan tambahan.
 Format:
 
 {
-  "level": "mudah|sedang|sulit",
+  "level": "mudah|sulit",
   "materi": "Keragaman Budaya dan Kearifan Lokal, Perubahan Wujud Benda",
   "questions": [
     {
