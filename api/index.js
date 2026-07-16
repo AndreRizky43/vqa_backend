@@ -34,9 +34,90 @@ Materi yang boleh digunakan:
 - Keragaman Budaya dan Kearifan Lokal
 - Perubahan Wujud Benda
 
-Tingkat kesulitan harus menyesuaikan skor siswa:
-- Skor dibawah 60 = mudah
-- Skor sama dengan atau diatas 60 = sulit
+Tingkat kesulitan WAJIB mengikuti aturan berikut.
+
+=========================
+LEVEL MUDAH (score < 60)
+=========================
+
+Karakteristik soal:
+- Pertanyaan bersifat mengenali gambar.
+- Jawaban dapat ditemukan langsung dari gambar.
+- Tidak membutuhkan analisis.
+- Kalimat singkat.
+- Pilihan jawaban jelas berbeda.
+
+Contoh:
+Gambar rumah adat Papua.
+"Soal: Rumah adat pada gambar berasal dari daerah..."
+
+Gambar es mencair.
+"Soal: Perubahan wujud pada gambar adalah..."
+
+JANGAN membuat soal yang membutuhkan alasan atau penalaran.
+
+=========================
+LEVEL SULIT (score >=60)
+=========================
+
+Karakteristik soal:
+- Soal berbasis analisis.
+- Membandingkan dua konsep.
+- Menghubungkan gambar dengan kehidupan sehari-hari.
+- Menguji pemahaman, bukan hafalan.
+- Gunakan studi kasus sederhana.
+
+Contoh:
+-Setelah melihat gambar air mendidih, mengapa tutup panci menjadi basah?
+-Setelah melihat gambar rumah Joglo dan rumah Papua, mengapa bentuk keduanya berbeda?
+-Setelah melihat gambar gamelan, mengapa alat musik tersebut termasuk budaya daerah?
+JANGAN membuat soal yang hanya menanyakan nama benda pada gambar.
+
+Perbedaan tingkat kesulitan harus benar-benar berbeda, bukan hanya mengganti kata atau istilah.
+
+SETIAP REQUEST HARUS BERBEDA.
+
+Jangan mengulang soal yang pernah dibuat sebelumnya.
+
+Acak:
+- urutan materi
+- urutan gambar
+- bentuk kalimat
+- konteks soal
+- urutan pilihan jawaban
+
+Walaupun menggunakan gambar yang sama, pertanyaannya harus berbeda.
+
+Contoh gambar rumah Joglo dapat menghasilkan soal:
+
+1.
+Rumah adat pada gambar berasal dari daerah...
+
+2.
+Mengapa rumah pada gambar memiliki atap tinggi?
+
+3.
+Apa fungsi rumah adat tersebut pada masyarakat?
+
+4.
+Rumah adat pada gambar mencerminkan budaya...
+
+Jangan membuat dua soal yang memiliki maksud sama.
+
+Gunakan berbagai tipe soal berikut secara acak.
+
+- Mengenali gambar
+- Menentukan perubahan wujud
+- Menentukan sebab akibat
+- Membandingkan dua budaya
+- Menentukan fungsi benda
+- Menentukan manfaat budaya
+- Menentukan ciri khas
+- Menentukan contoh dalam kehidupan sehari-hari
+- Menentukan kesimpulan dari gambar
+- Menentukan hubungan gambar dengan materi
+
+Setiap tipe soal minimal muncul satu kali.
 
 PENTING:
 1. SEMUA soal WAJIB menggunakan gambar.
@@ -90,6 +171,11 @@ VALIDASI SEBELUM MEMBERIKAN JAWABAN:
 - Semua image harus berasal dari daftar aset di atas.
 - Jika ada image kosong, perbaiki terlebih dahulu sebelum mengirim respons.
 - Keluaran harus JSON valid.
+- Tidak boleh ada dua soal yang memiliki pertanyaan sama.
+- Tidak boleh ada dua soal yang hanya berbeda satu atau dua kata.
+- Jika menggunakan gambar yang sama, pertanyaannya harus benar-benar berbeda.
+- Semua soal harus unik.
+- Tingkat mudah dan sulit harus berbeda secara konsep.
 `;
 
     // Panggil Gemini API menggunakan model gemini-2.5-flash
